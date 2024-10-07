@@ -2,13 +2,13 @@
 
 * *Ссылки которые связаны с проектом.*
 
-## [Skillfactory Diploma Work Web App](https://github.com/Morshimus/SkillFactory-Diploma-Work-Web-App) - Приложение написанное на framework Django, язык python3
+## [Skillfactory Diploma Work Web App](https://github.com/LanchSloth/Diploma_Web_App.git) - Приложение написанное на framework Django, язык python3
 
-## [Skillfactory Diploma Work CI Role](https://github.com/Morshimus/SkillFactory-Diploma-Work-CI-Role) - Роль Ansible для деплоя CI\CD Jenkins Pipelines
+## [Skillfactory Diploma Work CI Role](https://github.com/LanchSloth/Diploma_CI_Role.git) - Роль Ansible для деплоя CI\CD Jenkins Pipelines
 
-## [Skillfactory Diploma Work Prometheus Stack Role](https://github.com/Morshimus/SkillFactory-Diploma-Work-Loki-Prom-Grafana-Role) - Роль Ansible для деплоя кластера мониторинга Prometheus с Loki и Grafana
+## [Skillfactory Diploma Work Prometheus Stack Role](https://github.com/LanchSloth/Diploma_Work_Loki_Prom_Grafana_Role.git) - Роль Ansible для деплоя кластера мониторинга Prometheus с Loki и Grafana
 
-## [Skillfactory Diploma Work Helm Charts](https://github.com/Morshimus/SkillFactory-Diploma-Work-Helm-Charts) - Helm шаблон для приложения, плюс модифицированный шаблоны promtail и  postgresql. Работает как helm репозиторий
+## [Skillfactory Diploma Work Helm Charts](https://github.com/LanchSloth/Diploma_Helm_Charts.git) - Helm шаблон для приложения, плюс модифицированный шаблоны promtail и  postgresql. Работает как helm репозиторий
 
 
 
