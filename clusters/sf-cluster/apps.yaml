@@ -1,0 +1,92 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: postgresql
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn:
+    - name: infra-controllers
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/sf-cluster/postgresql
+  prune: true
+  suspend: false
+  wait: true
+  timeout: 1m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app-sf-web
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn:
+    - name: infra-controllers
+    - name: postgresql
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/sf-cluster/sf-web
+  prune: true
+  suspend: false
+  wait: true
+  timeout: 1m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: app-nodeexporter
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn:
+    - name: infra-controllers
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/sf-cluster/prometheus-node-exporter
+  prune: true
+  suspend: false
+  wait: true
+  timeout: 1m0s
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cadvisor
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn:
+    - name: infra-controllers
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/sf-cluster/cadvisor
+  prune: true
+  suspend: false
+  wait: true
+  timeout: 1m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: promtail
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  dependsOn:
+    - name: infra-controllers
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: ./apps/sf-cluster/promtail
+  prune: true
+  suspend: false
+  wait: true
+  timeout: 1m0s
